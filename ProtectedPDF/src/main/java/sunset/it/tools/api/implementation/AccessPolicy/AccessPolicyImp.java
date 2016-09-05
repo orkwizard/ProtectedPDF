@@ -1,7 +1,8 @@
 package sunset.it.tools.api.implementation.AccessPolicy;
 
 import java.util.ArrayList;
-import sunset.it.tools.pojo.AccessPolicy;
+
+import sunset.it.tools.api.objects.AccessPolicy;
 public class AccessPolicyImp {
 
 	public void bulkDelete(ArrayList<String> accessPolicyUniqueIds){

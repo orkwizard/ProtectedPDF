@@ -1,4 +1,4 @@
-package sunset.it.tools.pojo;
+package sunset.it.tools.api.objects;
 
 import java.io.Serializable;
 

@@ -18,10 +18,10 @@ import org.apache.http.impl.client.HttpClientBuilder;
 
 import com.google.gson.Gson;
 
-import sunset.it.tools.pojo.ChallengeResponse;
-import sunset.it.tools.pojo.Reader;
-import sunset.it.tools.pojo.ResponseResponse;
-import sunset.it.tools.pojo.Results;
+import sunset.it.tools.api.objects.ChallengeResponse;
+import sunset.it.tools.api.objects.Reader;
+import sunset.it.tools.api.objects.ResponseResponse;
+import sunset.it.tools.api.objects.Results;
 
 public class ProtectedPDF {
 

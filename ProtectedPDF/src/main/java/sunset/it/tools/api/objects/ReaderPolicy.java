@@ -1,56 +1,34 @@
-package sunset.it.tools.pojo;
+package sunset.it.tools.api.objects;
 
-import java.io.Serializable;
+public class ReaderPolicy {
 
-public class AccessPolicy implements Serializable {
-
-	/*
+	/****
 	 * 
-		 * AccessPolicy {
-		Id (string, optional),
-		Name (string, optional),
+	 *  ReaderPolicy {
 		PdfLimit (integer, optional),
 		BrowserLimit (integer, optional),
-		CustomField (string, optional),
 		ComputersMax (integer, optional),
-		IpAddressesMax (integer, optional),
-		IgnoredIpAddresses (string, optional),
 		OfflineDurationinDays (integer, optional),
 		Expiry (string, optional),
+		IpAddressesMax (integer, optional),
+		IgnoredIpAddresses (string, optional),
 		DocumentLimit (integer, optional),
 		RelativeExpiryInDays (integer, optional),
 		OpenLimit (integer, optional),
 		PrintLimit (integer, optional)
 		}
- * 
- */
-	
-	private String Id;
-	private String Name;
+	 */
 	private int PdfLimit;
 	private int BrowserLimit;
-	private String CustomField;
 	private int ComputersMax;
-	private int IpAddressesMax;
-	private String IgnoredIpAddresses;
 	private int OfflineDurationinDays;
 	private String Expiry;
+	private int IpAddressesMax;
+	private int IgnoredIpAddresses;
 	private int DocumentLimit;
 	private int RelativeExpiryInDays;
 	private int OpenLimit;
 	private int PrintLimit;
-	public String getId() {
-		return Id;
-	}
-	public void setId(String id) {
-		Id = id;
-	}
-	public String getName() {
-		return Name;
-	}
-	public void setName(String name) {
-		Name = name;
-	}
 	public int getPdfLimit() {
 		return PdfLimit;
 	}
@@ -63,29 +41,11 @@ public class AccessPolicy implements Serializable {
 	public void setBrowserLimit(int browserLimit) {
 		BrowserLimit = browserLimit;
 	}
-	public String getCustomField() {
-		return CustomField;
-	}
-	public void setCustomField(String customField) {
-		CustomField = customField;
-	}
 	public int getComputersMax() {
 		return ComputersMax;
 	}
 	public void setComputersMax(int computersMax) {
 		ComputersMax = computersMax;
-	}
-	public int getIpAddressesMax() {
-		return IpAddressesMax;
-	}
-	public void setIpAddressesMax(int ipAddressesMax) {
-		IpAddressesMax = ipAddressesMax;
-	}
-	public String getIgnoredIpAddresses() {
-		return IgnoredIpAddresses;
-	}
-	public void setIgnoredIpAddresses(String ignoredIpAddresses) {
-		IgnoredIpAddresses = ignoredIpAddresses;
 	}
 	public int getOfflineDurationinDays() {
 		return OfflineDurationinDays;
@@ -98,6 +58,18 @@ public class AccessPolicy implements Serializable {
 	}
 	public void setExpiry(String expiry) {
 		Expiry = expiry;
+	}
+	public int getIpAddressesMax() {
+		return IpAddressesMax;
+	}
+	public void setIpAddressesMax(int ipAddressesMax) {
+		IpAddressesMax = ipAddressesMax;
+	}
+	public int getIgnoredIpAddresses() {
+		return IgnoredIpAddresses;
+	}
+	public void setIgnoredIpAddresses(int ignoredIpAddresses) {
+		IgnoredIpAddresses = ignoredIpAddresses;
 	}
 	public int getDocumentLimit() {
 		return DocumentLimit;
@@ -125,14 +97,12 @@ public class AccessPolicy implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "AcessPolicy [Id=" + Id + ", Name=" + Name + ", PdfLimit=" + PdfLimit + ", BrowserLimit=" + BrowserLimit
-				+ ", CustomField=" + CustomField + ", ComputersMax=" + ComputersMax + ", IpAddressesMax="
-				+ IpAddressesMax + ", IgnoredIpAddresses=" + IgnoredIpAddresses + ", OfflineDurationinDays="
-				+ OfflineDurationinDays + ", Expiry=" + Expiry + ", DocumentLimit=" + DocumentLimit
-				+ ", RelativeExpiryInDays=" + RelativeExpiryInDays + ", OpenLimit=" + OpenLimit + ", PrintLimit="
-				+ PrintLimit + "]";
+		return "ReaderPolicy [PdfLimit=" + PdfLimit + ", BrowserLimit=" + BrowserLimit + ", ComputersMax="
+				+ ComputersMax + ", OfflineDurationinDays=" + OfflineDurationinDays + ", Expiry=" + Expiry
+				+ ", IpAddressesMax=" + IpAddressesMax + ", IgnoredIpAddresses=" + IgnoredIpAddresses
+				+ ", DocumentLimit=" + DocumentLimit + ", RelativeExpiryInDays=" + RelativeExpiryInDays + ", OpenLimit="
+				+ OpenLimit + ", PrintLimit=" + PrintLimit + "]";
 	}
-	
 	
 	
 	
