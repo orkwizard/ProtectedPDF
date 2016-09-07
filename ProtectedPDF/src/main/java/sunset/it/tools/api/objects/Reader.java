@@ -28,7 +28,7 @@ public class Reader implements Serializable{
 	private String PasswordEncrypted;
 	private boolean IsActive;
 	private String Notes;
-	private Policy Policy;
+	private ReaderPolicy Policy;
 	private String ExternalKey;
 	private String CustomField;
 	public String getId() {
@@ -67,10 +67,10 @@ public class Reader implements Serializable{
 	public void setNotes(String notes) {
 		Notes = notes;
 	}
-	public Policy getPolicy() {
+	public ReaderPolicy getPolicy() {
 		return Policy;
 	}
-	public void setPolicy(Policy policy) {
+	public void setPolicy(ReaderPolicy policy) {
 		Policy = policy;
 	}
 	public String getExternalKey() {

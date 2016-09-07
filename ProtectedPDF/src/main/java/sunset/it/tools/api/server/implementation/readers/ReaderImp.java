@@ -30,12 +30,12 @@ public class ReaderImp implements Readers{
 
 	public ArrayList<Reader> getReaders(String page, String sort, String filter) {
 		// TODO Auto-generated method stub
-		ArrayList<Reader> readers = new ArrayList<Reader>();
+		ArrayList<Reader> readers=null; 
 		String result="";
 		URIBuilder uri;
 		
 		try {
-			uri = new URIBuilder(server.getBaseURL()+"Doc");
+			uri = new URIBuilder(server.getProBaseURL()+"Reader");
 			uri.addParameter("page",page);
 			uri.addParameter("sort", sort);
 			uri.addParameter("filter", filter);
@@ -47,11 +47,17 @@ public class ReaderImp implements Readers{
 			Results results = server.getGson().fromJson(result,Results.class);
 			//Convertir los result objects a Documents
 			Reader[] readers_array = results.getReaders(); 
+			int size = readers_array.length;
+			readers = new ArrayList<Reader>(size);
+			for(int i=0;i<size;i++){
+				System.out.println(readers_array[i].toString());
+				readers.add(readers_array[i]);
+			}
+			
 		}catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return readers;
 	}
 
@@ -85,8 +91,9 @@ public class ReaderImp implements Readers{
 		return null;
 	}
 	
-	public void main(String args[]){
-		
+	public static void main(String args[]){
+		ReaderImp readers = new ReaderImp();
+		readers.getReaders("","","");
 	}
 
 }

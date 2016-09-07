@@ -24,11 +24,12 @@ public class ReaderPolicy {
 	private int OfflineDurationinDays;
 	private String Expiry;
 	private int IpAddressesMax;
-	private int IgnoredIpAddresses;
+	private String IgnoredIpAddresses;
 	private int DocumentLimit;
 	private int RelativeExpiryInDays;
 	private int OpenLimit;
 	private int PrintLimit;
+	
 	public int getPdfLimit() {
 		return PdfLimit;
 	}
@@ -65,10 +66,10 @@ public class ReaderPolicy {
 	public void setIpAddressesMax(int ipAddressesMax) {
 		IpAddressesMax = ipAddressesMax;
 	}
-	public int getIgnoredIpAddresses() {
+	public String getIgnoredIpAddresses() {
 		return IgnoredIpAddresses;
 	}
-	public void setIgnoredIpAddresses(int ignoredIpAddresses) {
+	public void setIgnoredIpAddresses(String ignoredIpAddresses) {
 		IgnoredIpAddresses = ignoredIpAddresses;
 	}
 	public int getDocumentLimit() {

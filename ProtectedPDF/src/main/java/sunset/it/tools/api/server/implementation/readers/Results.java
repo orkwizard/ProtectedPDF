@@ -14,6 +14,7 @@ public class Results implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private Reader[] Results;
+	private String TotalRecords;
 
 	public Reader[] getReaders() {
 		return Results;

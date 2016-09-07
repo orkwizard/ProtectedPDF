@@ -108,7 +108,7 @@ public class ProtectedPDF {
 		
 		if(result.isEmpty())
 			return null;
-		
+		/*
 		Results results = gson.fromJson(result,Results.class);
 		
 		Reader[] r = results.getReaders();
@@ -119,6 +119,8 @@ public class ProtectedPDF {
 			readers.add(results.getReaders()[i]);
 		return readers;
 		
+		*/
+		return null;
 	}
 	
 	

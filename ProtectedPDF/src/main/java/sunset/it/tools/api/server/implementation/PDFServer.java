@@ -20,8 +20,9 @@ public class PDFServer implements HttpServer {
 
 	HttpClient httpClient;
 	private String XVITRACCOUNTTOKEN="a24aa6ba-7b3c-426b-b74a-550327804bf5";
-	private String XVITRSESSIONTOKEN="5afe25f9-17c1-41d2-b0a5-8321913da3ff";
-	private static final String baseURL = "https://pro.protectedpdf.com:443/api/2.0/";
+	private String XVITRSESSIONTOKEN="9de6b037-08df-455e-810c-e3fec70eae25";
+	private static final String baseURL = "https://api.protectedpdf.com:443/api/2.0/";
+	private static final String pro_baseURL = "https://pro.protectedpdf.com:443/api/2.0/";
 	private static final Gson gson = new Gson();
 	
 	
@@ -37,6 +38,10 @@ public class PDFServer implements HttpServer {
 	}
 	public String getBaseURL(){
 		return baseURL;
+	}
+	
+	public String getProBaseURL(){
+		return pro_baseURL;
 	}
 	
 	public Gson getGson(){
@@ -60,7 +65,7 @@ public class PDFServer implements HttpServer {
 				System.out.println(output);
 				result+=output;
 			}
-			
+			return result;
 		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -77,7 +82,7 @@ public class PDFServer implements HttpServer {
 		
 		
 		
-		return "No data";
+		return "Data";
 	}
 
 	
@@ -125,5 +130,7 @@ public class PDFServer implements HttpServer {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
 
 }
