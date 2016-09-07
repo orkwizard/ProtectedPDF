@@ -9,6 +9,7 @@ import org.apache.http.entity.StringEntity;
 
 public interface HttpServer {
 	public void post(StringEntity entity,String command,URIBuilder params);
+	public String post(URIBuilder uri);
 	public void put(StringEntity entity,String command,URIBuilder params);
 	public String get(URIBuilder uri);
 	public void close();

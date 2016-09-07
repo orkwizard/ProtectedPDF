@@ -20,7 +20,21 @@ public class ReaderImp implements Readers{
 
 	public Reader getReaderbyUserName(String username) {
 		// TODO Auto-generated method stub
-		return null;
+		URIBuilder uri;
+		String result;
+		Reader aReader=null;
+		
+		try {
+			uri=new URIBuilder(server.getProBaseURL()+"Reader/Username");
+			uri.addParameter("username",username);
+			result = server.get(uri);
+			aReader = server.getGson().fromJson(result, Reader.class);
+			System.out.println("Reader by Username :" + aReader.toString());
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return aReader;
 	}
 
 	public String deleteReaders(ArrayList<String> readerUniqueIds) {
@@ -68,12 +82,37 @@ public class ReaderImp implements Readers{
 
 	public String deleteReader(String id) {
 		// TODO Auto-generated method stub
-		return null;
+		String result="";
+		try {
+			URIBuilder uri = new URIBuilder(server.getProBaseURL()+"Reader/"+id);
+			
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return result;
 	}
 
 	public Reader getReader(String id) {
 		// TODO Auto-generated method stub
-		return null;
+		Reader aReader=null;
+		URIBuilder uri;
+		String result;
+		
+		try {
+			uri= new URIBuilder(server.getProBaseURL()+"Reader/"+id);
+			result = server.get(uri);
+			aReader = server.getGson().fromJson(result, Reader.class);
+			System.out.println("Reader by ID :" + aReader.toString());
+			
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return aReader;
 	}
 
 	public String updateReader(String id, Reader reader) {
@@ -93,7 +132,10 @@ public class ReaderImp implements Readers{
 	
 	public static void main(String args[]){
 		ReaderImp readers = new ReaderImp();
-		readers.getReaders("","","");
+		//readers.getReaders("","","");
+		//readers.getReaderbyUserName("eosorio");
+		//readers.getReader("08df3c46-3fda-4ad9-9bf1-99044a50c1f4");
+	
 	}
 
 }

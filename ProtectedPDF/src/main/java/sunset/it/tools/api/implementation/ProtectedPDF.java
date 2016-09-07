@@ -81,10 +81,9 @@ public class ProtectedPDF {
 		input.setContentType("application/json");
 		post.setEntity(input);
 		
-		
-		
 		return "";
 	}
+	
 	
 	
 	public ArrayList<Reader> getReaders(String page,String sort,String filter){

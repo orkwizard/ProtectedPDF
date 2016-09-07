@@ -8,6 +8,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -129,6 +130,19 @@ public class PDFServer implements HttpServer {
 	public void setToken() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public String post(URIBuilder uri) {
+		// TODO Auto-generated method stub
+		String result="";
+		try {
+			HttpPost post = new HttpPost(uri.build());
+			
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
 	}
 	
 	
